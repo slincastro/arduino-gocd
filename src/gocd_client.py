@@ -1,10 +1,9 @@
-import requests, json
-
-# sudo pip install requests
-# sudo pip install pySerial
 import time
 
-from arduino_client import Arduino
+import json
+import requests
+
+from src.arduino_client import Arduino
 
 while True:
     host = 'http://localhost/go/api'
