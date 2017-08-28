@@ -17,9 +17,9 @@ while True:
 
     instance_request = requests.get(gocd.history_url)
 
-    pipeline = Pipeline(instance_request.content)
+    pipeline = Pipeline()
 
-    state_request = requests.get(gocd.pipeline_url + str(pipeline.get_instance))
+    state_request = requests.get(gocd.pipeline_url + pipeline.get_instance(instance_request))
 
     pipeline_status = pipeline.get_status(state_request.content)
 
