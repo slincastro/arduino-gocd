@@ -1,9 +1,13 @@
 class Server(object):
-    def __init__(self, protocol, server, pipeline):
+    def __init__(self, protocol, host, pipeline):
         self._protocol = protocol
-        self._server = server
+        self._host = host
         self._pipeline = pipeline
 
     @property
-    def url(self):
-        return self._protocol + "://" + self._server + "/go/api/pipelines/" + self._pipeline + "/status"
+    def history_url(self):
+        return self._protocol + "://" + self._host + "/go/api/pipelines/" + self._pipeline + "/history/100000000"
+
+    @property
+    def pipeline_url(self):
+        return self._protocol + "://" + self._host + "/go/api/pipelines/" + self._pipeline + "/instance/"

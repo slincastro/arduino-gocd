@@ -1,0 +1,136 @@
+{
+    "label": "7",
+    "name": "piArm",
+    "natural_order": 7,
+    "can_run": true,
+    "stages": [
+        {
+            "result": "Passed",
+            "jobs": [
+                {
+                    "state": "Completed",
+                    "result": "Passed",
+                    "name": "pruebas_unitarias",
+                    "id": 225,
+                    "scheduled_date": 1503672752469
+                }
+            ],
+            "name": "pruebas",
+            "rerun_of_counter": null,
+            "approval_type": "success",
+            "scheduled": true,
+            "operate_permission": true,
+            "approved_by": "changes",
+            "can_run": true,
+            "id": 225,
+            "counter": "1"
+        },
+        {
+            "result": "Failed",
+            "jobs": [
+                {
+                    "state": "Completed",
+                    "result": "Failed",
+                    "name": "cobertura",
+                    "id": 226,
+                    "scheduled_date": 1503672771380
+                }
+            ],
+            "name": "cobertura",
+            "rerun_of_counter": null,
+            "approval_type": "success",
+            "scheduled": true,
+            "operate_permission": true,
+            "approved_by": "changes",
+            "can_run": true,
+            "id": 226,
+            "counter": "1"
+        }
+    ],
+    "id": 193,
+    "build_cause": {
+        "trigger_message": "modified by Slin castro <scastro@thoughtworks.com>",
+        "approver": "",
+        "material_revisions": [
+            {
+                "material": {
+                    "fingerprint": "78e1d21256a8fd50b592f4bb692b5cce0fa14e765abd751bd6bd53fc541cb106",
+                    "description": "URL: https://github.com/slincastro/piArm.git, Branch: master",
+                    "id": 65,
+                    "type": "Git"
+                },
+                "modifications": [
+                    {
+                        "modified_time": 1503359479000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 200,
+                        "revision": "0f2277b95b7aca98edbcd98bd7d432adfbaff4c6",
+                        "email_address": null,
+                        "comment": "adding gripper"
+                    },
+                    {
+                        "modified_time": 1503358176000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 199,
+                        "revision": "9262ac3cfbd8ec2e116b143a48ea4ecc2dc75907",
+                        "email_address": null,
+                        "comment": "adding gripper to arm"
+                    },
+                    {
+                        "modified_time": 1503356057000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 198,
+                        "revision": "b1b40d90f25e4b492297e4a99ba845fe7733dc4f",
+                        "email_address": null,
+                        "comment": "adding joints"
+                    },
+                    {
+                        "modified_time": 1503342569000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 197,
+                        "revision": "1da7c4d7ba40407e6d7c596cece3f7caff8b73ab",
+                        "email_address": null,
+                        "comment": "adding shoulder joint"
+                    },
+                    {
+                        "modified_time": 1503333464000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 196,
+                        "revision": "57d6627c0284516dea4d3d7cbdc0e8ad7a761f63",
+                        "email_address": null,
+                        "comment": "adding arm object"
+                    },
+                    {
+                        "modified_time": 1503192320000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 195,
+                        "revision": "0ee8e82f05bbdfa855e9b4eefc482254ea01c615",
+                        "email_address": null,
+                        "comment": "adding vertical joint"
+                    },
+                    {
+                        "modified_time": 1503191285000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 194,
+                        "revision": "5c367f877f29b250280aefb172509f447d59b098",
+                        "email_address": null,
+                        "comment": "adding right move"
+                    },
+                    {
+                        "modified_time": 1503189937000,
+                        "user_name": "Slin castro <scastro@thoughtworks.com>",
+                        "id": 193,
+                        "revision": "22eaa4dd7c858877ee5065b99658433c7885704f",
+                        "email_address": null,
+                        "comment": "add horizontal-joint test"
+                    }
+                ],
+                "changed": true
+            }
+        ],
+        "trigger_forced": false
+    },
+    "preparing_to_schedule": false,
+    "counter": 7,
+    "comment": null
+}
