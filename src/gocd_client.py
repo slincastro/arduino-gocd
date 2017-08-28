@@ -1,40 +1,33 @@
 import time
-import json
 import requests
 import sys
 
-from src.pipeline import Pipeline
-
 sys.path.append('../')
 
+from src.pipeline import Pipeline
 from src.arduino_client import Arduino
 from src.server import Server
 
 while True:
     protocol = 'http'
     host = 'localhost'
-    pipeline = 'x'
+    pipeline = 'ejerciciotdd'
     gocd = Server(protocol, host, pipeline)
+    arduino = Arduino()
 
     instance_request = requests.get(gocd.history_url)
 
     pipeline = Pipeline(instance_request.content)
 
-    state_request = requests.get(gocd.pipeline_url+pipeline.get_instance)
+    state_request = requests.get(gocd.pipeline_url + str(pipeline.get_instance))
 
-    print response['locked']
-    print response['paused']
-    print response['schedulable']
+    pipeline_status = pipeline.get_status(state_request.content)
 
-    locked = bool(response['locked'])
-    paused = bool(response['paused'])
-    schedulable = bool(response['schedulable'])
+    print pipeline_status
 
-    # arduino = Arduino()
-
-    # if not locked and not paused and not schedulable:
-    #   arduino.send('b')
-    # else:
-    #   arduino.send('a')
+    if pipeline_status == 'Passed':
+        arduino.send('b')
+    else:
+        arduino.send('a')
 
     time.sleep(5)
