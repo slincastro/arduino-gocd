@@ -26,8 +26,10 @@ while True:
     print pipeline_status
 
     if pipeline_status == 'Passed':
-        arduino.send('b')
+        passed = 'b'
+        arduino.send(passed)
     else:
-        arduino.send('a')
+        failed = 'a'
+        arduino.send(failed)
 
     time.sleep(5)
