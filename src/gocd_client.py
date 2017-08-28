@@ -11,7 +11,7 @@ from src.server import Server
 while True:
     protocol = 'http'
     host = 'localhost'
-    pipeline = 'ejerciciotdd'
+    pipeline = 'piarm'
     gocd = Server(protocol, host, pipeline)
     arduino = Arduino()
 
@@ -19,7 +19,7 @@ while True:
 
     pipeline = Pipeline()
 
-    state_request = requests.get(gocd.pipeline_url + pipeline.get_instance(instance_request))
+    state_request = requests.get(gocd.pipeline_url + pipeline.get_instance(instance_request.content))
 
     pipeline_status = pipeline.get_status(state_request.content)
 
